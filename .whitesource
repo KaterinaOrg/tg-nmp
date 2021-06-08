@@ -14,8 +14,20 @@
   },
   "remediateSettings": {
     "enableRenovate": true,    
-    "extends": ["config:base"],    
-    "dependencyDashboard": true,    
-    "dependencyDashboardTitle":"renovate dependency dashboard"}
+    "remediateSettings": {
+      "enableRenovate": true,    
+      "prBodyTemplate": "{{{header}}}{{{table}}}{{{notes}}}{{{changelogs}}}{{{configDescription}}}{{{controls}}}{{{footer}}}",
+      "extends": [
+        "schedule:monthly",
+        ":label(dependency)",
+        ":ignoreModulesAndTests",
+        ":prHourlyLimit2",
+        "group:monorepos",
+        "group:recommended"
+        ],
+      "branchPrefix": "sca/",
+      "dependencyDashboard": true,
+      "dependencyDashboardApproval": true  
+      "dependencyDashboardTitle":"renovate dashboard"}
     }
 }
