@@ -11,5 +11,11 @@
   },
   "issueSettings": {
     "minSeverityLevel": "LOW"
-  }
+  },
+  "remediateSettings": {
+    "enableRenovate": true,    
+    "extends": ["config:base"],    
+    "dependencyDashboard": true,    
+    "dependencyDashboardTitle":"renovate dependency dashboard"}
+    }
 }
